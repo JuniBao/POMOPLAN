@@ -1,0 +1,44 @@
+{% extends "pomo/basenav.html" %}
+
+{% block js %}
+    {% load staticfiles %}
+    <script src="{% static 'pomo/plan.js' %}"></script>
+{% endblock %}
+
+
+{% block content %}
+
+    <div class="container">
+
+        <br><br><br><br>
+
+        <div id="select-measure" style="float: right;" class="btn-group">
+            <button id="select-work" type="button" class="btn btn-default" style="background-color: lightgrey" >Tag</button>
+            <button id="select-break" type="button" class="btn btn-default" >Date</button>
+        </div><br><br>
+        <hr>
+
+      <table id="plan_table" class="table table-striped">
+        <thead>
+          <tr>
+            <th>#Tag</th>
+              <th>Completed</th>
+            <th>Planned</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>Tom</td>
+            <td>john@example.com</td>
+          </tr>
+          <tr>
+            <td>Helen</td>
+            <td>mary@example.com</td>
+          </tr>
+        </tbody>
+
+      </table>
+    </div>
+
+{% endblock %}

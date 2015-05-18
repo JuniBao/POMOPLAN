@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    {% load staticfiles %}
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{% static 'pomo/style.css' %}">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <title>POMOPLAN HOME</title>
+</head>
+
+<body>
+<nav role="navigation" id="top-navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="navbar-header">
+        <button data-toggle="collapse" data-target=".navbar-collapse" class="btn btn-sucess navbar-toggle">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <p class="navbar-brand" style="font-size: 1.8em">POMOPLAN</p>
+    </div>
+
+    <div class="navbar-collapse collapse">
+        <ul id="nav_list" class="nav nav-justified">
+            <li><a href="/pomo/home" id="nav_pomodoro"><strong>POMODORO</strong></a></li>
+            <li><a href="/pomo/plan" id="nav_plan"><strong>Plan</strong></a></li>
+            <!--<li><a href="/pomo/home" id="nav_setting"><strong>Setting</strong></a></li>-->
+            <li><a href="/pomo/login" id="nav_logout" onclick="onclick_logout()"><strong>Logout</strong></a></li>
+        </ul>
+    </div>
+</nav>
+
+
+{% block content %} {% endblock %}
+</body>
+    <script src="http://crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/aes.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="{% static 'pomo/jquery_cookie.js' %}"></script>
+    <!-- Latest compiled JavaScript -->
+    <!-- crypto encription -->
+    <script src="{% static 'pomo/util.js' %}"></script>
+    <script src="{% static 'pomo/basenav.js' %}"></script>
+    {% block js %}{% endblock %}
+</html>

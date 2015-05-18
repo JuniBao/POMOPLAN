@@ -1,0 +1,45 @@
+{% extends "pomo/basenav.html" %}
+
+{% block js %}
+    {% load staticfiles %}
+    <script src="{% static 'pomo/home.js' %}"></script>
+{% endblock %}
+
+
+{% block content %}
+
+<div class="container">
+    <br><br><br><br>
+
+    <div id="select-measure" style="float: right;" class="btn-group">
+        <button id="select-work" type="button" class="btn btn-default" >Work</button>
+        <button id="select-break" type="button" class="btn btn-default" >Break</button>
+    </div><br><br>
+    <hr>
+
+    <div id="timer_container">
+        <div class="text-center" style="align-self: center;">
+            <h2 style="font-size: 3.0em; color: black" id="slogan">FOCUS!!!</h2>
+        </div>
+        <div class="text-center" style="align-self: center">
+            <p id="countdown" style="font-size: 10.0em; color: indianred" onclick="count_begin()">
+            </p>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="tag">Tag:</label>
+        <input type="text" class="form-control" id="tag">
+        <br>
+        <label for="memo">Memo:</label>
+        <textarea class="form-control" rows="4" id="memo"></textarea>
+    </div>
+
+</div>
+
+
+{% if name %}<h1>{{ name }}</h1>
+{% endif %}
+
+
+{% endblock %}
